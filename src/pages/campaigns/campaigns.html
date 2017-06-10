@@ -1,0 +1,65 @@
+<!--
+  Generated template for the OrganizePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+  <ion-navbar color="secondary">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img align="left" width="30%" src="networkDE.png"/>
+        </ion-col>
+        <button ion-button menuToggle right>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+  
+</ion-header>
+ 
+
+<ion-content padding>
+
+  <div class="section-heading scrollpoint sp-effect3">
+    <h1 text-center>Open Campaigns</h1>
+    <div class="divider"></div>
+    <p text-center></p>
+  </div>
+
+  <div>
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+        <ion-icon [name]="item.icon" item-left></ion-icon>
+        {{item.title}}
+        <div class="item-note" item-right>
+          {{item.date}}
+        </div>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-grid>
+      <ion-row center>
+        <ion-col>
+         <img width="35%" src="networkDE.png"/> 
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+      <a href="https://twitter.com/thenetworkde?lang=en"><img width="10%" src="twittericon.png"/></a>
+      <a href="https://www.facebook.com/thenetworkde/"><img width="10%" src="facebookicon.png"/></a> 
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+      <p text-center>Copyright &copy; 2017</p>
+  </ion-toolbar>
+</ion-footer>
+
+
