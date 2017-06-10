@@ -5,35 +5,35 @@ page-donate {
 
     .cards-bg {
 
-  ion-card {
-    position: relative;
-    text-align: center;
-  }
+	ion-card {
+		position: relative;
+		text-align: center;
+	}
 
-    .card-header {
-    font-size: 2.0em;
-    font-weight: bold;
-    color: #00BFFF;
-  }
+	.card-header {
+		font-size: 2.0em;
+		font-weight: bold;
+		color: #00BFFF;
+	}
   
   
-  .card-title {
-    position: absolute;
-    top: 36%;
-    font-size: 2.0em;
-    width: 150%;
-    font-weight: bold;
-    color: #00BFFF;
-  }
+	.card-title {
+		position: absolute;
+		top: 36%;
+		font-size: 2.0em;
+		width: 150%;
+		font-weight: bold;
+		color: #00BFFF;
+	}
 
-  .card-subtitle {
-    font-size: 1.0em;
-    position: absolute;
-    top: 45%;
-    width: 150%;
-    font-weight: bold;
-    color: #00BFFF;
-  }
+  	.card-subtitle {
+		font-size: 1.0em;
+		position: absolute;
+		top: 45%;
+		width: 150%;
+		font-weight: bold;
+		color: #00BFFF;
+	}
 
-}
+	}
 }
