@@ -23,3 +23,26 @@ export class AccountPage {
   }
 
 }
+
+export class Account{
+
+  lastName: string;
+  email: string;
+  zipCode: string;
+  city: string;
+  state: string;
+  interests: Array<{interest: string}>;
+  bio: string;
+  campaignsJoined: Array<{campaign: Campaign}>;
+
+  constructor(_firstName, _lastName, _email, _zipCode){
+    this.lastName = _lastName;
+    this.email = _email;
+    this.zipCode = _zipCode;
+    this.city = "Waldorf";
+    this.state = "MD";
+    this.interests = [];
+    this.bio = "I like helping people to understand things";
+    this.campaignsJoined = [];
+  }
+}

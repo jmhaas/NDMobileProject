@@ -11,6 +11,7 @@ import { CommunityPage } from '../pages/community/community';
 import { OrganizePage } from '../pages/organize/organize';
 import { CampaignPage } from '../pages/campaign/campaign';
 import { ProfilePage } from '../pages/profile/profile';
+import { AccountPage } from '../pages/account/account';
 
 import { HttpModule } from '@angular/http';
 
@@ -28,8 +29,8 @@ import { HttpProvider } from '../providers/http/http';
     OrganizePage,
     CommunityPage,
     CampaignPage,
-    ProfilePage
-
+    ProfilePage,
+    AccountPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +47,8 @@ import { HttpProvider } from '../providers/http/http';
     OrganizePage,
     CommunityPage,
     CampaignPage,
-    ProfilePage
+    ProfilePage,
+    AccountPage
   ],
   providers: [
     StatusBar,

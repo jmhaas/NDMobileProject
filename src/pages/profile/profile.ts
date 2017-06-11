@@ -13,14 +13,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-  name: string;
-  email: string;
-  zipCode: string;
-  city: string;
-  state: string;
-  interests: Array<{interest: string}>;
-  bio: string;
-  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -30,3 +22,6 @@ export class ProfilePage {
   }
 
 }
+
+
+
