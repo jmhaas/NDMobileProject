@@ -1,0 +1,35 @@
+{
+    "campaigns" : 
+    [
+        {
+            "title" : "Clean Up the Park",
+            "date" : "7.15.2017",
+            "location" : "Brandywine Park",
+            "description" : "Get some sun and clean up the park with your neighbors and friends!"
+        },
+        {
+            "title" : "Donate Your Unused Clothes",
+            "date" : "7.17.2017",
+            "location" : "3601 N Jefferson St, Wilmington - Highlands Elementry School",
+            "description" : "Have some clothes you haven't worn in years? Donate!"
+        },
+        {
+            "title" : "Plant A Tree",
+            "date" : "7.25.2017",
+            "location" : "South College Ave, Newark",
+            "description" : "Hang out with the community and save the environment"
+        },
+        {
+            "title" : "Clean up 202",
+            "date" : "7.30.2017",
+            "location" : "3640 Concord Pike, Wilmington",
+            "description" : "Have some homemade lemonade and clean up the highway"
+        },
+        {
+            "title" : "Educate the Community About Tech",
+            "date" : "8.5.2017",
+            "location" : "4737 Concord Pike, Wilmington",
+            "description" : "Calling all geeks, lets get more people involved in the tech community"
+        }
+    ]
+}
