@@ -10,6 +10,7 @@ import { DonatePage } from '../pages/donate/donate';
 import { OrganizePage } from '../pages/organize/organize';
 import { CommunityPage } from '../pages/community/community';
 import { ProfilePage } from '../pages/profile/profile';
+import { AccountPage } from '../pages/account/account';
 
 @Component({
   templateUrl: 'app.html'
