@@ -17,8 +17,21 @@
 -->
 <ion-content padding>
   <div class="section-heading scrollpoint sp-effect3">
-    <h1 text-center>Dedicate this page to Volunteer</h1>
+    <h1 id="topHeading" text-center>Get Involved</h1>
+    <h5 text-center id="subTopHeading">You're already making a difference</h5>
     <div class="divider"></div>
+
+    <div id="inputList">
+      <ion-list>
+          <ion-input type="text" placeholder="First Name" id="inputFirstName"></ion-input>
+          <ion-input type="text" placeholder="Last Name" id="inputLastName"></ion-input>
+          <ion-input type="text" placeholder="Email" id="inputEmail"></ion-input>
+          <ion-input type="text" placeholder="Zip Code" id="inputZipCode"></ion-input>
+      </ion-list>
+    </div>
+
+    <button ion-button id="startButton"> Start Volunteering</button>
+
     <p text-center></p>
   </div>
 </ion-content>
