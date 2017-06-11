@@ -33,7 +33,8 @@ export class MyApp {
       { title: 'Organize', component: OrganizePage },
       { title: 'Donate', component: DonatePage },
       { title: 'Community', component: CommunityPage },
-      { title: 'Profile', component: ProfilePage }
+      { title: 'Profile', component: ProfilePage },
+      { title: 'Account', component: AccountPage }
     ];
 
   }
