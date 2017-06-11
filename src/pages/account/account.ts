@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CampaignPage, Campaign } from '../campaign/campaign';
 
 /**
  * Generated class for the AccountPage page.
