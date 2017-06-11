@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -16,6 +16,17 @@ export class HttpProvider {
   }
 
   getCampaignJsonData(){
-    return this.http.get('../../../assets/campaigns.json').map(res => res.json());
+    return this.http.get('../../../assets/campaigns.json')
+    .map((res:Response) => res.json().campaigns);
   }
+
+//   load() {
+//     console.log('json called');
+//     return new Promise(resolve => {
+//         this.http.get('assets/data/patient.json').map(response => {
+//             this.data = response.json();
+//             resolve(this.data);
+//         });
+//     });
+// }
 }
