@@ -2,4 +2,32 @@ page-volunteer {
     ion-col {
         text-align: center;
     }
+
+    #topHeading{
+        margin-top: 5%;
+    }
+
+    #subTopHeading{
+        color: gray;
+    }
+
+    #inputList{
+        margin-top: 15%;
+    }
+
+    #startButton{
+        margin-top: -5%;
+        background-color: #DAA520;
+        border-radius: 30px;
+    }
+
+    ion-input{
+        border: 2px solid gray;
+        border-radius: 5px;
+        font-size: 15px;
+        border-spacing: 10px;
+        ;
+    }
+
+
 }
