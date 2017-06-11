@@ -2,4 +2,18 @@ page-campaigns {
     ion-col {
         text-align: center;
     }
+    .cards-bg {
+
+		ion-card {
+			position: relative;
+			text-align: center;
+		}
+
+		.card-header {
+			font-size: 1.0em;
+			font-weight: bold;
+			color: #00BFFF;
+		}
+	}
+
 }
