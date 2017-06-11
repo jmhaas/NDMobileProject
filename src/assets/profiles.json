@@ -8,7 +8,8 @@
             "zip" : "19810",
             "volunteer interests" : ["Animals", "Building"],
             "bio" : "I like building shelters for animals",
-            "email" : "Rahmir.ford@gmail.com"
+            "email" : "Rahmir.ford@gmail.com",
+            "photo" : "assets/img/rf.jpg"
         },
         {
             "name" : "Justin Haas",
@@ -17,7 +18,8 @@
             "zip" : "18746",
             "volunteer interests" : ["Animals", "Clean-up"],
             "bio" : "I enjoy long walks on the beach while picking up trash",
-            "email" : "J.haas@aol.com"
+            "email" : "J.haas@aol.com",
+            "photo" : "assets/img/jh.jpg"
         },
         {
             "name" : "Andrew Wong",
@@ -26,7 +28,8 @@
             "zip" : "15120",
             "volunteer interests" : ["Teaching", "Painting"],
             "bio" : "I like teaching kids how to paint",
-            "email" : "A.Wong@hotmail.com"
+            "email" : "A.Wong@hotmail.com",
+            "photo" : "assets/img/aw.jpg"
         },
         {
             "name" : "Stephen Pegram",
@@ -35,7 +38,8 @@
             "zip" : "18436",
             "volunteer interests" : ["Gardening", "Teaching"],
             "bio" : "If you want to learn it, I can teach it.",
-            "email" : "Stevie.P@yahoo.com"
+            "email" : "Stevie.P@yahoo.com",
+            "photo" : "assets/img/sp.jpg"
         },
         {
             "name" : "Daniel Prahl",
@@ -43,7 +47,8 @@
             "zip" : "19810",
             "volunteer interests" : ["Reading", "Cooking"],
             "bio" : "Reading opens your mind and future",
-            "email" : "D.Nice@gmail.com"
+            "email" : "D.Nice@gmail.com",
+            "photo" : "assets/img/dp.jpg"
         }
 
     ]
