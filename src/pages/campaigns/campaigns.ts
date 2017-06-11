@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Campaign, CampaignPage } from '../campaign/campaign';
-
+import { HttpProvider } from '../../providers/http/http';
 
 /**
  * Generated class for the CampaignsPage page.
@@ -13,26 +13,41 @@ import { Campaign, CampaignPage } from '../campaign/campaign';
 @Component({
   selector: 'page-campaigns',
   templateUrl: 'campaigns.html',
+  providers: [ HttpProvider ]
 })
 export class CampaignsPage {
   selectedItem: any;
   items: Array<{title: string, date:string, note: string, location:string, icon: string}>;
   campaigns: Array<{campaign: Campaign}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private httpProvider: HttpProvider) {
     this.selectedItem = navParams.get('item');
 
     this.campaigns = [];
-    this.campaigns[0] = ({campaign:new Campaign("Clean Up The Park", "7/10/2016", "Brandywine Park", "Lets clean up")});
     this.items = [];
-
-    this.items.push({
-    title: this.campaigns[0].campaign.getTitle(),
-    date: this.campaigns[0].campaign.getDate(),
-    note: this.campaigns[0].campaign.getDescription(),
-    location: this.campaigns[0].campaign.getLocation(),
-    icon: 'megaphone'
+    this.httpProvider.getCampaignJsonData().subscribe((data) => {
+      console.log("What is in the data: ", data);
+      this.campaigns = data;
+      for (let i = 0; i < this.campaigns.length; i += 1) {
+        this.items.push({
+        title: this.campaigns[i]["title"],
+        date: this.campaigns[i]["date"],
+        note: this.campaigns[i]["description"],
+        location: this.campaigns[i]["location"],
+        icon: 'megaphone'
+      })
+    }
+    },
+    err => {
+      console.log("Error, "+err);
+    },
+    () => {
+      console.log("Completed");
     })
+    // this.httpProvider.load().then((data) => {
+    //   console.log("what is in the data ", data);
+    //   this.campaigns = data.json().campaigns;
+    // });
   }
 
   itemTapped(event, item) {
