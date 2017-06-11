@@ -3,12 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Campaign, CampaignPage } from '../campaign/campaign';
 import { HttpProvider } from '../../providers/http/http';
 
-/**
- * Generated class for the CampaignsPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-campaigns',
@@ -44,10 +38,6 @@ export class CampaignsPage {
     () => {
       console.log("Completed");
     })
-    // this.httpProvider.load().then((data) => {
-    //   console.log("what is in the data ", data);
-    //   this.campaigns = data.json().campaigns;
-    // });
   }
 
   itemTapped(event, item) {

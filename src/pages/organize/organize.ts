@@ -17,6 +17,7 @@ import { HttpProvider } from '../../providers/http/http';
   providers: [ HttpProvider ]
 })
 export class OrganizePage {
+  private httpProvider: HttpProvider
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -25,7 +26,7 @@ export class OrganizePage {
     console.log('ionViewDidLoad OrganizePage');
   }
   
-  addCampaign = function(_title, _date, _location, _description) {
+  addCampaign = function(_title, _date, _location, _description, ) {
     // this.campaignsPage.items.push({
     //   title: _title,
     //   date: _date,
@@ -34,6 +35,7 @@ export class OrganizePage {
     //   icon: 'megaphone'
     // })
     // console.log(this.campaignsPage.items)
+
     this.navCtrl.push(CampaignsPage, {
       title: _title,
       date: _date,
@@ -41,7 +43,12 @@ export class OrganizePage {
       location: _location,
       icon: 'megaphone'
     })
-    console.log(this.campaignsPage.items)
+    // this.httpProvider.postCampaignJsonData().subscribe(data =>
+    // {this.data.response = data._body;
+    // }, error => {
+    //   console.log("ERRRORRRR!");
+    // })
+
   }
 
 }

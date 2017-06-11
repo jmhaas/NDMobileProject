@@ -10,6 +10,7 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class HttpProvider {
+  data: any;
 
   constructor(public http: Http) {
     console.log('Hello HttpProvider Provider');
@@ -20,13 +21,12 @@ export class HttpProvider {
     .map((res:Response) => res.json().campaigns);
   }
 
-//   load() {
-//     console.log('json called');
-//     return new Promise(resolve => {
-//         this.http.get('assets/data/patient.json').map(response => {
-//             this.data = response.json();
-//             resolve(this.data);
-//         });
-//     });
-// }
+  postCampaignJsonData(){
+    var data = JSON.stringify({title: this.data.title,
+    data: this.data.date,
+    location: this.data.location,
+    description: this.data.description});
+    return this.http.post('../../../assets/campaigns.json', data)
+    .map((res:Response) => res.json().campaigns);
+  }
 }
