@@ -29,4 +29,9 @@ export class HttpProvider {
     return this.http.post('../../../assets/campaigns.json', data)
     .map((res:Response) => res.json().campaigns);
   }
+  getProfilesJsonData(){
+    return this.http.get('../../../assets/profiles.json')
+    .map((res:Response) => res.json().profiles);
+  }
+
 }

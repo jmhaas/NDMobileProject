@@ -19,6 +19,9 @@
       <ion-item>{{selectedItem.location}}</ion-item>
       <ion-item>{{selectedItem.note}}</ion-item>
   </ion-list>
+<div *ngIf = "selectedItem">
+  Attending: {{selectedItem.members}}
+</div>
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
   </div>
