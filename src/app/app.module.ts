@@ -10,7 +10,6 @@ import {CampaignsPage} from '../pages/campaigns/campaigns';
 import { CommunityPage } from '../pages/community/community';
 import { OrganizePage } from '../pages/organize/organize';
 import { CampaignPage } from '../pages/campaign/campaign';
-import { ProfilePage } from '../pages/profile/profile';
 import { AccountPage } from '../pages/account/account';
 
 import { HttpModule } from '@angular/http';
@@ -29,7 +28,6 @@ import { HttpProvider } from '../providers/http/http';
     OrganizePage,
     CommunityPage,
     CampaignPage,
-    ProfilePage,
     AccountPage
   ],
   imports: [
@@ -47,7 +45,6 @@ import { HttpProvider } from '../providers/http/http';
     OrganizePage,
     CommunityPage,
     CampaignPage,
-    ProfilePage,
     AccountPage
   ],
   providers: [
