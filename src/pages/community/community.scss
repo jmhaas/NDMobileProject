@@ -1,5 +1,13 @@
 page-community {
+   ion-grid {
+        padding-bottom: 20;
+   }
+   
    ion-col {
         text-align: left;
+    }
+    #map{
+        width: 400px;
+        height: 400px;
     }
 }

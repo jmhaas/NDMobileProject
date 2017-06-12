@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 /**
  * Generated class for the CommunityResourcesPage page.
@@ -7,6 +8,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
+
+declare var google;
+
 @IonicPage()
 @Component({
   selector: 'page-community',
@@ -14,11 +18,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CommunityPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild("map") mapElement :ElementRef;
+  map: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public geolocation:Geolocation) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CommunityPage');
+    this.loadMap();
+  }
+
+  loadMap(){
+    this.geolocation.getCurrentPosition().then((position) => {
+
+    let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+    let mapOptions = {
+      center: latLng,
+      zoom: 5,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      streetViewControl: false,
+      draggable: false,
+      mapTypeControl: false,
+      scrollwheel: false,
+    };
+
+      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    }, (error) => {
+      alert("Error!");
+    });
   }
 
 }
+

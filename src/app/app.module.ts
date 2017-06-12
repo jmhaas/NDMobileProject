@@ -13,6 +13,7 @@ import { CampaignPage } from '../pages/campaign/campaign';
 import { AccountPage } from '../pages/account/account';
 
 import { HttpModule } from '@angular/http';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -51,7 +52,8 @@ import { HttpProvider } from '../providers/http/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HttpProvider
+    HttpProvider,
+    Geolocation
   ]
 })
 export class AppModule {}
