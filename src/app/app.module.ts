@@ -10,6 +10,7 @@ import {CampaignsPage} from '../pages/campaigns/campaigns';
 import { CommunityPage } from '../pages/community/community';
 import { OrganizePage } from '../pages/organize/organize';
 import { CampaignPage } from '../pages/campaign/campaign';
+import { AccountPage } from '../pages/account/account';
 
 import { HttpModule } from '@angular/http';
 import { Geolocation } from '@ionic-native/geolocation';
@@ -27,8 +28,8 @@ import { HttpProvider } from '../providers/http/http';
     DonatePage,
     OrganizePage,
     CommunityPage,
-    CampaignPage
-
+    CampaignPage,
+    AccountPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,8 @@ import { HttpProvider } from '../providers/http/http';
     DonatePage,
     OrganizePage,
     CommunityPage,
-    CampaignPage
+    CampaignPage,
+    AccountPage
   ],
   providers: [
     StatusBar,
