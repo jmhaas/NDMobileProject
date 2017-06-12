@@ -35,7 +35,7 @@ export class CommunityPage {
 
     let mapOptions = {
       center: latLng,
-      zoom: 5,
+      zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       streetViewControl: false,
       draggable: false,
