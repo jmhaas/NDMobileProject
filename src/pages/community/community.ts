@@ -31,10 +31,10 @@ export class CommunityPage {
   loadMap(){
     this.geolocation.getCurrentPosition().then((position) => {
 
-    let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    let currentLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
     let mapOptions = {
-      center: latLng,
+      center: currentLocation,
       zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       streetViewControl: false,
@@ -43,17 +43,17 @@ export class CommunityPage {
       scrollwheel: false,
     };
 
-    let brandywine = {latitude: 39.756,longitude: -75.549};
+    let brandywine = new google.maps.LatLng(39.756, -75.549);
 
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    
     let marker = new google.maps.Marker({
       map: this.map,
       position: brandywine,
     });
 
-
     marker.setMap(this.map);
 
-      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
     }, (error) => {
       alert("Error!");
     });
