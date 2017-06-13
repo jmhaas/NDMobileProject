@@ -14,12 +14,19 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-      <ion-item>{{selectedItem.date}}</ion-item>
-      <ion-item>{{selectedItem.location}}</ion-item>
-      <ion-item>{{selectedItem.note}}</ion-item>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  <ion-card>
+    <div class = "card-title">{{selectedItem.note}}</div>
+    <ion-card-content>
+      <p>Location: {{selectedItem.location}}</p>
+      <p>Date: {{selectedItem.date}}</p>
+    </ion-card-content>
+    <div class = "whos-going">See who's going to {{selectedItem.title}}</div>
+    <ion-item *ngFor = "let people of attending">
+      <ion-avatar item-start>
+        <img src= {{people.aviPath}}>
+      </ion-avatar>
+      <h2>{{people.name}}</h2>
+    </ion-item>
+  </ion-card>
+
 </ion-content>
