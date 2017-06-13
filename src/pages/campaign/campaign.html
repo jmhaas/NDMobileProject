@@ -14,31 +14,18 @@
 </ion-header>
 
 <ion-content>
-  <!--<ion-list>
-      <ion-item>{{selectedItem.date}}</ion-item>
-      <ion-item>{{selectedItem.location}}</ion-item>
-      <ion-item>{{selectedItem.note}}</ion-item>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>-->
-
   <ion-card>
-     <!--<ion-item>
-        <h4 class="card-header">{{selectedItem.title}}</h4>
-    </ion-item>-->
     <div class = "card-title">{{selectedItem.note}}</div>
     <ion-card-content>
       <p>Location: {{selectedItem.location}}</p>
       <p>Date: {{selectedItem.date}}</p>
     </ion-card-content>
-
-    <ion-item>
-      <!--<ion-avatar item-start>
-        <img src="img/marty-avatar.png">
+    <div class = "whos-going">See who's going to {{selectedItem.title}}</div>
+    <ion-item *ngFor = "let people of attending">
+      <ion-avatar item-start>
+        <img src= {{people.aviPath}}>
       </ion-avatar>
-      <h2>Marty McFly</h2>
-      <p>November 5, 1955</p>-->
+      <h2>{{people.name}}</h2>
     </ion-item>
   </ion-card>
 
