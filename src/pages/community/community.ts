@@ -31,19 +31,38 @@ export class CommunityPage {
   loadMap(){
     this.geolocation.getCurrentPosition().then((position) => {
 
-    let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    let currentLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
     let mapOptions = {
-      center: latLng,
-      zoom: 5,
+      center: currentLocation,
+      zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       streetViewControl: false,
-      draggable: false,
+      draggable: true,
       mapTypeControl: false,
       scrollwheel: false,
     };
 
-      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    let brandywine = new google.maps.LatLng(39.756, -75.549);
+
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    
+ 
+     let marker = new google.maps.Marker({
+       map: this.map,
+       position: brandywine,
+     });
+
+    marker.setMap(this.map);
+
+    var infowindow = new google.maps.InfoWindow({
+      content: "<h4>Clean Up The Park</h4><br><p> Date: 7.15.2017 Location: Brandywine Park",
+    });
+
+    marker.addListener('click', function() {
+      infowindow.open(this.map, marker);
+    });
+
     }, (error) => {
       alert("Error!");
     });
