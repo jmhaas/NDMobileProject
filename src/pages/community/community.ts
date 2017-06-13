@@ -35,13 +35,23 @@ export class CommunityPage {
 
     let mapOptions = {
       center: latLng,
-      zoom: 15,
+      zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       streetViewControl: false,
       draggable: false,
       mapTypeControl: false,
       scrollwheel: false,
     };
+
+    let brandywine = {latitude: 39.756,longitude: -75.549};
+
+    let marker = new google.maps.Marker({
+      map: this.map,
+      position: brandywine,
+    });
+
+
+    marker.setMap(this.map);
 
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
     }, (error) => {
