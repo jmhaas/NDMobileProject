@@ -35,10 +35,10 @@ export class CommunityPage {
 
     let mapOptions = {
       center: currentLocation,
-      zoom: 14,
+      zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       streetViewControl: false,
-      draggable: false,
+      draggable: true,
       mapTypeControl: false,
       scrollwheel: false,
     };
@@ -47,12 +47,21 @@ export class CommunityPage {
 
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
     
-    let marker = new google.maps.Marker({
-      map: this.map,
-      position: brandywine,
-    });
+ 
+     let marker = new google.maps.Marker({
+       map: this.map,
+       position: brandywine,
+     });
 
     marker.setMap(this.map);
+
+    var infowindow = new google.maps.InfoWindow({
+      content: "<h4>Clean Up The Park</h4><br><p> Date: 7.15.2017 Location: Brandywine Park",
+    });
+
+    marker.addListener('click', function() {
+      infowindow.open(this.map, marker);
+    });
 
     }, (error) => {
       alert("Error!");
