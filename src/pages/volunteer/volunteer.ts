@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AccountPage } from '../account/account';
+import { CampaignsPage } from '../campaigns/campaigns';
 
 /**
  * Generated class for the VolunteerPage page.
@@ -23,8 +23,8 @@ export class VolunteerPage {
     console.log('ionViewDidLoad VolunteerPage');
   }
 
-  goToAccountPage(){
-    this.navCtrl.push(AccountPage);
+  goToCampaignsPage(){
+    this.navCtrl.push(CampaignsPage);
   }
 
   }

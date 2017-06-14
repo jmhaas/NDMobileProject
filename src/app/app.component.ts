@@ -31,8 +31,8 @@ export class MyApp {
       { title: 'Campaigns', component: CampaignsPage },
       { title: 'Organize', component: OrganizePage },
       { title: 'Donate', component: DonatePage },
-      { title: 'Community', component: CommunityPage },
-      { title: 'Account', component: AccountPage }
+      { title: 'Community', component: CommunityPage }
+     
     ];
 
   }

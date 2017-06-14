@@ -21,7 +21,7 @@
       <p>Date: {{selectedItem.date}}</p>
     </ion-card-content>
     <div class = "whos-going">See who's going to {{selectedItem.title}}</div>
-    <ion-item *ngFor = "let people of attending">
+    <ion-item *ngFor = "let people of attending" (click)="profileTapped($event, people, httpProvider)">
       <ion-avatar item-start>
         <img src= {{people.aviPath}}>
       </ion-avatar>
