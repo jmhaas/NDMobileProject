@@ -6,7 +6,7 @@
             "city" : "Wilmington",
             "state" : "Delaware",
             "zip" : "19810",
-            "volunteer interests" : ["Animals", "Building"],
+            "interests" : ["Animals", "Building"],
             "bio" : "I like building shelters for animals",
             "email" : "Rahmir.ford@gmail.com",
             "photo" : "assets/img/rf.jpg"
@@ -16,7 +16,7 @@
             "city" : "West Chester",
             "state" : "Pennsylvania",
             "zip" : "18746",
-            "volunteer interests" : ["Animals", "Clean-up"],
+            "interests" : ["Animals", "Clean-up"],
             "bio" : "I enjoy long walks on the beach while picking up trash",
             "email" : "J.haas@aol.com",
             "photo" : "assets/img/jh.jpg"
@@ -26,7 +26,7 @@
             "city" : "Cherry Hill",
             "state" : "New Jersey",
             "zip" : "15120",
-            "volunteer interests" : ["Teaching", "Painting"],
+            "interests" : ["Teaching", "Painting"],
             "bio" : "I like teaching kids how to paint",
             "email" : "A.Wong@hotmail.com",
             "photo" : "assets/img/aw.jpg"
@@ -36,7 +36,7 @@
             "city" : "Waldorf",
             "state" : "Maryland",
             "zip" : "18436",
-            "volunteer interests" : ["Gardening", "Teaching"],
+            "interests" : ["Gardening", "Teaching"],
             "bio" : "If you want to learn it, I can teach it.",
             "email" : "Stevie.P@yahoo.com",
             "photo" : "assets/img/sp.jpg"
@@ -44,8 +44,9 @@
         {
             "name" : "Daniel Prahl",
             "city" : "Wilmington",
+            "state" : "Delaware",
             "zip" : "19810",
-            "volunteer interests" : ["Reading", "Cooking"],
+            "interests" : ["Reading", "Cooking"],
             "bio" : "Reading opens your mind and future",
             "email" : "D.Nice@gmail.com",
             "photo" : "assets/img/dp.jpg"

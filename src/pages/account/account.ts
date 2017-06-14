@@ -21,7 +21,8 @@ export class AccountPage {
   campaigns: Array<{campaign: Campaign}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private httpProvider: HttpProvider) {
-    this.selectedItem = navParams.get('item');
+   // this.selectedItem = navParams.get('item');
+   this.selectedItem = this.navParams.data;
 
     this.campaigns = [];
     this.items = [];

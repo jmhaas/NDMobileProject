@@ -4,16 +4,16 @@
 <ion-content padding>
   
     <div id="img-div">
-      <img src ="../assets/img/rf.jpg"/>
+      <img [src]="selectedItem.photo"/>
     </div>
   <!--<button id="edit"><h5>Edit</h5></button>-->
   <div id="account-detail">
-    <label>Name: </label><h4>Rahmir Ford</h4>
-    <label>City:  </label><h4>Wilmington</h4>
-    <label>State: </label><h4>Delaware</h4>
-    <label>Email: </label><h4>Rahmir.ford@gmail.com</h4>
-    <label>Bio: </label><h4>I like building shelters for animals</h4>
-    <label>Volunteer Interests: </label><h4>Teaching, Building, Animals</h4>
+    <label>Name: </label><h4>{{selectedItem.name}}</h4>
+    <label>City:  </label><h4>{{selectedItem.city}}</h4>
+    <label>State: </label><h4>{{selectedItem.state}}</h4>
+    <label>Email: </label><h4>{{selectedItem.email}}</h4>
+    <label>Bio: </label><h4>{{selectedItem.bio}}</h4>
+    <label>Volunteer Interests: </label><h4>{{selectedItem.interests}}</h4>
     <label>Campaigns Joined: </label>
     
     <ion-card class = "cards-bg" *ngFor ="let item of items" (click)="itemTapped($event, item)">
