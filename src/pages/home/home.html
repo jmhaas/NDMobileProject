@@ -1,72 +1,49 @@
-
-<!--<ion-header >
-  <ion-navbar color="secondary">
-    <ion-grid>
-        <ion-row>
-          <ion-col>
-            <img align="left" width="30%" src="networkDE.png"/>
-          </ion-col>
-          <button ion-button menuToggle right>
-            <ion-icon name="menu"></ion-icon>
-          </button>
-        </ion-row>
-    </ion-grid>
-  </ion-navbar>
-</ion-header>-->
- 
-
-
-<!--
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
--->
-<ion-content padding>
+<ion-content >
   <div class="section-heading scrollpoint sp-effect3">
     <h1 text-center>Our Time Is Now</h1>
     <div class="divider"></div>
     <p text-center>Discover How You Can Give back</p>
 
     <ion-grid>
+
       <ion-row>
+
         <ion-col>
-          <button ion-button type="button" (click)="goToVolunteer()">Volunteer</button>
+          <button ion-button large color="secondary" round icon-left (click)="goToVolunteer()">
+            <ion-icon name='hand' is-active="false"></ion-icon>
+              Volunteer
+          </button>
         </ion-col>
+
         <ion-col>
-          <button ion-button type="button" (click)="goToOrganize()">Organize</button>
+          <button ion-button large color="secondary" round icon-left (click)="goToOrganize()">
+            <ion-icon name='people' is-active="false"></ion-icon>
+              Organize
+          </button>
         </ion-col>
+
         <ion-col>
-          <button ion-button type="button" (click)="goToDonate()">Donate</button>
+          <button ion-button large id="donate" round icon-left (click)="goToDonate()">
+            <ion-icon name='card' is-active="false"></ion-icon>
+              Donate
+          </button>
         </ion-col>
+
       </ion-row>
+
     </ion-grid>
+
+    <div>
+      <button ion-button full color="secondary" type="button" (click)="goToCommunity()">
+        Local Community Info
+      </button>
+      <button ion-button full color="secondary" type="button" (click)="goToCampaigns()">
+        View Open Campaigns
+      </button>
+      <!--<button ion-button full color="secondary" type="button" (click)="goToAccount()">
+        View Your Account Profile
+      </button>-->
+    </div>
 
   </div>
 </ion-content>
-
-
-<!--<ion-footer>
-  <ion-toolbar color="secondary">
-    <ion-grid>
-      <ion-row center>
-        <ion-col>
-         <img width="35%" src="networkDE.png"/>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-      <a href="https://twitter.com/thenetworkde?lang=en"><img width="10%" src="twittericon.png"/></a>
-      <a href="https://www.facebook.com/thenetworkde/"><img width="10%" src="facebookicon.png"/></a>
-        </ion-col>
-      </ion-row>
-      </ion-grid>
-      <p text-center>Copyright &copy; 2017</p>
-  </ion-toolbar>
-
-</ion-footer>-->
-
-
-
